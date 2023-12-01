@@ -8,6 +8,7 @@
     --white: #ffffff;
     --blu: #0084FD;
     --purple: #9792e4;
+    --light-blue: #b5ddff;
 }
 
 .container-header{
@@ -19,8 +20,13 @@
 
 html{
     font-family: 'PT Sans', sans-serif;
+    line-height: 150%;
 }
 
+img{
+    width: 100%;
+    display: block;
+}
 header{
     background-color: var(--blu);
 }
@@ -47,9 +53,73 @@ header ul li:hover a{
     border-radius: 20px;
     padding: 5px 10px;
 }
+.container  > div{
+    padding: 50px 30px; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main div .big-card{
+    background-color: var(--light-blue);
+    border-radius: 20px;
+    padding: 50px 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
 
 
+.big-card h3,
+.card h3{
+    color: var(--blu);
+    font-size: 25px;
+    text-align: center;
+}
 
+.big-card p{
+    color: #5A6E7F;
+    font-weight: bold;
+}
+
+.big-card .button{
+    background-color: var(--blu);
+    border-radius: 20px;
+    padding: 10px 50px;
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.big-card figure img{
+    position: relative;
+    bottom: 0;
+    width: 260px;
+}
+
+main div .card{
+    background-color: var(--light-blue);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.card p{
+    color: #5A6E7F;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.card i{
+    color: var(--blu);
+    font-size: 80px;
+}
 
 
 
@@ -73,10 +143,19 @@ header ul li:hover a{
 
 
 @media screen and (min-width: 480px){
-    
+    .container{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .container  > div{
+        display: flex;
+        flex-direction: row;
+
+        gap: 30px;
+    }
 }
 
-@media screen and (min-width: 810px){
+@media screen and (min-width: 850px){
     .container-header{
         width: 60%;
         margin: 0 auto;
@@ -88,5 +167,21 @@ header ul li:hover a{
     header ul{
         display: flex;
         gap: 30px;
+    }
+    .container{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .container  > div{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+    main div .big-card{
+        flex-basis: (100% / 3);
+    }
+
+    main div .card{
+        flex-basis: (100% / 3);
     }
 }
