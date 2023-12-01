@@ -11,8 +11,6 @@
 }
 
 .container-header{
-    width: 100%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,6 +79,7 @@ header ul li:hover a{
 @media screen and (min-width: 810px){
     .container-header{
         width: 60%;
+        margin: 0 auto;
     }
     header i.fa-bars{
         display: none;
