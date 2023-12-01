@@ -53,22 +53,33 @@ header ul li:hover a{
     border-radius: 20px;
     padding: 5px 10px;
 }
-.container  > div{
-    padding: 50px 30px; 
+
+.container{
+    margin-block: 80px ;
+}
+
+.container .flex{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-block: 30px;
 }
+
 
 main div .big-card{
     background-color: var(--light-blue);
     border-radius: 20px;
     padding: 50px 30px 0 30px;
+}
+
+main div .big-card > div{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
+    margin-bottom: 30px;
 }
+
 
 
 .big-card h3,
@@ -94,10 +105,20 @@ main div .big-card{
     letter-spacing: 3px;
 }
 
-.big-card figure img{
+.big-card img{
     position: relative;
     bottom: 0;
     width: 260px;
+}
+
+main div .small-card{
+    background-color: var(--light-blue);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
 }
 
 main div .card{
@@ -106,9 +127,10 @@ main div .card{
     padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 30px;
+    align-items: center;
 }
+.small-card p,
 .card p{
     color: #5A6E7F;
     font-weight: bold;
@@ -116,6 +138,7 @@ main div .card{
 }
 
 
+.small-card i,
 .card i{
     color: var(--blu);
     font-size: 80px;
@@ -133,25 +156,28 @@ main div .card{
 
 
 
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 480px){
     .container{
-        width: 60%;
-        margin: 0 auto;
+        width: 90%;
+        margin: 60px auto 100px;
     }
-    .container  > div{
-        display: flex;
-        flex-direction: row;
 
-        gap: 30px;
+    .container .flex{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    }
+
+    main div .big-card{
+    flex-basis: 70%;
+    }
+
+    main div .small-card{
+    flex-basis: 30%;
+    }
+
+    main div .card{
+    flex-basis: calc(100% / 3);
     }
 }
 
@@ -170,18 +196,27 @@ main div .card{
     }
     .container{
         width: 60%;
-        margin: 0 auto;
+        margin: 60px auto 100px;
     }
-    .container  > div{
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
+    .container .flex{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
     }
+
     main div .big-card{
-        flex-basis: (100% / 3);
+    flex-basis: 68%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    }
+  
+
+    main div .small-card{
+    flex-basis: 32%;
     }
 
     main div .card{
-        flex-basis: (100% / 3);
+    flex-basis: calc(100% / 3);
     }
 }
