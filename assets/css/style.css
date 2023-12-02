@@ -162,7 +162,7 @@ main .planning{
 
 .planning .card2{
     background-color: var(--white);
-    border-radius: 30px;
+    border-radius: 50px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -181,8 +181,82 @@ main .planning{
     color: black;
 }
 
+main #testimonial{
+    width: 80%;
+    margin: 50px auto;
+}
 
+#testimonial div:first-child{
+    text-align: center;
+}
 
+#testimonial span{
+    text-transform: uppercase;
+}
+
+#testimonial h2{
+    color: var(--purple);
+    margin-block: 30px;
+    font-size: 35px;
+}
+
+#testimonial p{
+    font-size: 18px;
+    line-height: 160%;
+}
+
+#testimonial .testimonial-card{
+    background-color: var(--purple);
+    border-radius: 50px;
+    padding: 20px;
+    text-align: center;
+    margin-block: 30px;
+    
+}
+
+#testimonial .testimonial-card .testimonial1{
+    background-image: url(../img/testimonial1.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;   
+}
+
+#testimonial .testimonial-card p{
+    margin-block: 20px;
+    color: var(--white);
+    font-size: 20px;
+}
+
+#testimonial .testimonial-card cite{
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--white);
+}
+
+#testimonial .testimonial-card .testimonial2{
+    background-image: url(../img/testimonial2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;   
+}
+
+#testimonial .testimonial-card .testimonial3{
+    background-image: url(../img/testimonial3.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;   
+}
 
 
 
@@ -222,6 +296,24 @@ main .planning{
     .planning .card2 h3{
         font-size: 26px;
     }
+
+    #testimonial .testimonial-card{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #testimonial .testimonial-card figure{
+        flex-basis: 30%;
+    }
+
+    #testimonial .testimonial-card div{
+        flex-basis: 70%;
+        text-align: left;
+    }
+
+
+
 }
 
 @media screen and (min-width: 850px){
@@ -289,5 +381,19 @@ main .planning{
     .planning .card2{
         padding: 20px 80px;
     }
-    
+
+    main #testimonial{
+        width: 60%;
+        margin: 50px auto;
+    }
+
+    #testimonial .testimonial-card figure{
+        flex-basis: 20%;
+    }
+
+    #testimonial .testimonial-card div{
+        flex-basis: 80%;
+        text-align: left;
+    }
+
 }
