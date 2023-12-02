@@ -258,10 +258,57 @@ main #testimonial{
     margin: 0 auto;   
 }
 
+main #benefit{
+    background-color: var(--purple);
+}
 
+main #benefit > h2{
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 30px;
+    line-height: 150%;
+}
 
+main #benefit .flex-benefit{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
 
+main #benefit .flex-benefit .benefit-card{
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    margin-block: 30px;
+}
 
+main #benefit .flex-benefit .benefit-card h2{
+    color: var(--purple);
+    font-size: 50px;
+}
+
+main #benefit .flex-benefit .benefit-card h4{
+    color: var(--purple);
+    font-size: 25px;
+    margin-block: 40px 30px;
+    text-transform: capitalize;
+}
+
+main #benefit .flex-benefit .benefit-card p{
+    color: grey;
+    margin-bottom: 30px;
+}
+
+main #benefit .flex-benefit .benefit-card .more{
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 10px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
 
 
 
@@ -312,6 +359,17 @@ main #testimonial{
         text-align: left;
     }
 
+    main #benefit .flex-benefit{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    main #benefit .flex-benefit .benefit-card{
+        flex-basis: calc(90% / 2);
+        margin: 0;
+    }
 
 
 }
@@ -334,24 +392,24 @@ main #testimonial{
         margin: 60px auto 100px;
     }
     .container .flex{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
     }
 
     main div .big-card{
-    flex-basis: 68%;
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
+        flex-basis: 68%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
     }
   
     main div .small-card{
-    flex-basis: 32%;
+        flex-basis: 32%;
     }
 
     main div .card{
-    flex-basis: calc(100% / 3);
+        flex-basis: calc(100% / 3);
     }
 
     main .planning{
@@ -396,4 +454,15 @@ main #testimonial{
         text-align: left;
     }
 
+    main #benefit .flex-benefit{
+        width: 60%;
+    }
+    main #benefit .flex-benefit .benefit-card{
+        flex-basis: calc(90% / 3);
+        margin: 0;
+    }
+
+    main #benefit > h2{
+        font-size: 50px;
+    }
 }
