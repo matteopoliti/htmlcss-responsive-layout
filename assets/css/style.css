@@ -55,7 +55,8 @@ header ul li:hover a{
 }
 
 .container{
-    margin-block: 80px ;
+    width: 80%;
+    margin: 80px auto;
 }
 
 .container .flex{
@@ -137,14 +138,48 @@ main div .card{
     text-align: center;
 }
 
-
 .small-card i,
 .card i{
     color: var(--blu);
     font-size: 80px;
 }
 
+main .planning{
+    background-color: var(--purple);
+    padding: 60px 30px;
+}
 
+.planning h2{
+    color: var(--white);
+    margin-block: 100px 70px;
+    font-size: 30px;
+}
+
+.planning div:first-child p{
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.planning .card2{
+    background-color: var(--white);
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.planning .card2 p{
+    text-align: center;
+    font-style: italic;
+}
+.planning .card2 .arrow{
+    background-color: var(--purple);
+    border-radius: 50%;
+    padding: 10px 15px;
+    color: black;
+}
 
 
 
@@ -179,6 +214,14 @@ main div .card{
     main div .card{
     flex-basis: calc(100% / 3);
     }
+
+    .planning h2{
+        font-size: 70px;
+    }
+
+    .planning .card2 h3{
+        font-size: 26px;
+    }
 }
 
 @media screen and (min-width: 850px){
@@ -211,7 +254,6 @@ main div .card{
     gap: 50px;
     }
   
-
     main div .small-card{
     flex-basis: 32%;
     }
@@ -219,4 +261,33 @@ main div .card{
     main div .card{
     flex-basis: calc(100% / 3);
     }
+
+    main .planning{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 50px;
+        padding: 100px 500px;
+    }
+
+    .planning h2{
+        font-size: 30px;
+    }
+
+    .planning div:first-child{
+        padding: 30px;
+    }
+
+    .planning div:first-child figure{
+        width: 400px;
+        margin: 0 auto;
+        position: relative;
+        top: -50px;
+        
+    }
+
+    .planning .card2{
+        padding: 20px 80px;
+    }
+    
 }
