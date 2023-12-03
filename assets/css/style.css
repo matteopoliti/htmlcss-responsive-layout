@@ -310,6 +310,65 @@ main #benefit .flex-benefit .benefit-card .more{
     letter-spacing: 3px;
 }
 
+main .about{
+    width: 80%;
+    margin: 80px auto;
+}
+
+main .about h2{
+    font-size: 50px;
+    color: var(--purple);
+    text-transform: capitalize;
+    margin-bottom: 50px;
+}
+
+main .about div:first-child p{
+    line-height: 200%;
+    margin-block: 40px;
+    font-size: 18px;
+}
+
+.about .about-img{
+    background-image: url(../img/about.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+main .about .about-img i{
+    color: var(--purple);
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+main .about div:nth-child(2) p{
+    margin-block: 40px;
+    line-height: 140%;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--purple);
+}
+main .about div:nth-child(2) .linkedin{
+    background-color: var(--purple);
+    padding: 10px 15px;
+    border-radius: 30px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+main .about div:nth-child(2) .linkedin i{
+    margin-right: 10px;
+}
+
+
+
+
+
 
 
 @media screen and (min-width: 480px){
@@ -371,8 +430,15 @@ main #benefit .flex-benefit .benefit-card .more{
         margin: 0;
     }
 
+    main .about{
+        display: flex;
+        gap: 40px;
+    }
+
 
 }
+
+
 
 @media screen and (min-width: 850px){
     .container-header{
@@ -464,5 +530,22 @@ main #benefit .flex-benefit .benefit-card .more{
 
     main #benefit > h2{
         font-size: 50px;
+    }
+
+    main .about{
+        width: 50%;
+        gap: 80px;
+        
+    }
+
+    main .about h2{
+        font-size: 80px;
+
+    }
+
+    main .about div:first-child p{
+        line-height: 250%;
+        margin-block: 40px;
+        font-size: 20px;
     }
 }
