@@ -27,6 +27,9 @@ img{
     width: 100%;
     display: block;
 }
+
+/* header */
+
 header{
     background-color: var(--blu);
 }
@@ -53,6 +56,9 @@ header ul li:hover a{
     border-radius: 20px;
     padding: 5px 10px;
 }
+
+
+/* main */
 
 .container{
     width: 80%;
@@ -106,11 +112,19 @@ main div .big-card > div{
     letter-spacing: 3px;
 }
 
-.big-card img{
-    position: relative;
-    bottom: 0;
+.big-card figure {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+.big-card figure img{
     width: 260px;
 }
+
+
 
 main div .small-card{
     background-color: var(--light-blue);
@@ -146,16 +160,20 @@ main div .card{
 
 main .planning{
     background-color: var(--purple);
-    padding: 60px 30px;
+}
+
+.planning .container{
+    padding-block: 50px;
 }
 
 .planning h2{
     color: var(--white);
     margin-block: 100px 70px;
     font-size: 30px;
+    line-height: 120%;
 }
 
-.planning div:first-child p{
+.planning .container div:first-child p{
     color: var(--white);
     margin-bottom: 30px;
 }
@@ -219,6 +237,7 @@ main #testimonial{
     background-position: center;
     background-size: cover;
     border-radius: 50%;
+    aspect-ratio: 1;
     width: 200px;
     height: 200px;
     margin: 0 auto;   
@@ -243,6 +262,7 @@ main #testimonial{
     background-position: center;
     background-size: cover;
     border-radius: 50%;
+    aspect-ratio: 1;
     width: 200px;
     height: 200px;
     margin: 0 auto;   
@@ -253,6 +273,7 @@ main #testimonial{
     background-position: center;
     background-size: cover;
     border-radius: 50%;
+    aspect-ratio: 1;
     width: 200px;
     height: 200px;
     margin: 0 auto;   
@@ -366,34 +387,113 @@ main .about div:nth-child(2) .linkedin i{
 }
 
 
+footer{
+    background-color: var(--purple);
+}
 
+footer section{
+    width: 80%;
+    margin: 0 auto;
+    padding-block: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
 
+footer section span:first-child{
+    text-transform: uppercase;
+    color: rgb(205, 205, 205);
+    letter-spacing: 2px;
+    font-size: 20px;
+}
 
+footer section h3{
+    text-transform: capitalize;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 140%;
+    text-align: center;
+}
 
+footer section span:nth-child(3){
+    color: #fdc15f;
+    font-size: 60px;
+    font-weight: bold;
+}
 
-@media screen and (min-width: 480px){
+footer section p,
+footer section span:nth-child(6),
+footer section span:nth-child(6) a{
+    color: var(--white) ;
+    text-align: center;
+}
+
+footer section .get-started{
+    background-color: var(--white);
+    color: var(--purple);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 20px 80px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+footer section span:nth-child(6){
+    color: var(--white);
+}
+
+footer > div{
+    background-color: #333333;
+}
+
+footer > div div{
+    width: 80%;
+    margin: 0 auto;
+    padding-block: 50px 30px;
+}
+
+footer > div div p{
+    text-align: center;
+    color: white;
+    margin-bottom: 80px;
+}
+
+footer > div div p a{
+    color: #7571A8;
+}
+
+/*  */
+/*  */
+/* media query */
+/*  */
+/*  */
+
+/* tablet */
+
+@media screen and (min-width: 576px){
     .container{
-        width: 90%;
+        width: 0%;
         margin: 60px auto 100px;
     }
 
     .container .flex{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
     }
-
-    main div .big-card{
-    flex-basis: 70%;
-    }
-
-    main div .small-card{
-    flex-basis: 30%;
-    }
-
+    
     main div .card{
-    flex-basis: calc(100% / 3);
+        width: calc((100% / 3) - 60px / 3);
     }
+    main div .big-card{
+        width: calc((100% / 3) * 2 - 40px / 2);
+    }
+    
 
     .planning h2{
         font-size: 70px;
@@ -439,8 +539,9 @@ main .about div:nth-child(2) .linkedin i{
 }
 
 
+/* desktop */
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 768px){
     .container-header{
         width: 60%;
         margin: 0 auto;
@@ -460,42 +561,38 @@ main .about div:nth-child(2) .linkedin i{
     .container .flex{
         display: flex;
         flex-direction: row;
-        gap: 30px;
+        flex-wrap: wrap;
+        gap: 20px;
     }
-
+    main div .card{
+        width: calc((100% / 3) - 60px / 3);
+    }
+    
     main div .big-card{
-        flex-basis: 68%;
+        width: calc((100% / 3) * 2 - (40 / 2));
         display: flex;
         flex-direction: row;
-        gap: 50px;
-    }
-  
-    main div .small-card{
-        flex-basis: 32%;
+       
     }
 
-    main div .card{
-        flex-basis: calc(100% / 3);
-    }
+    
 
-    main .planning{
+    main .planning .container{
         display: flex;
-        justify-content: center;
         align-items: flex-end;
         gap: 50px;
-        padding: 100px 500px;
     }
 
     .planning h2{
         font-size: 30px;
     }
 
-    .planning div:first-child{
+    .planning .container div{
         padding: 30px;
+        width: calc( (100% / 2) - (50px / 2));
     }
 
-    .planning div:first-child figure{
-        width: 400px;
+    .planning .container div:first-child figure{
         margin: 0 auto;
         position: relative;
         top: -50px;
@@ -524,7 +621,7 @@ main .about div:nth-child(2) .linkedin i{
         width: 60%;
     }
     main #benefit .flex-benefit .benefit-card{
-        flex-basis: calc(90% / 3);
+        width: calc(90% / 3);
         margin: 0;
     }
 
